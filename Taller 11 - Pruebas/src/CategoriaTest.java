@@ -16,25 +16,24 @@ import uniandes.cupi2.almacen.mundo.NodoAlmacen;
 
 public class CategoriaTest {
 	
+	private final static String RUTA_GENRAL = System.getProperty("user.dir");;
+	
 	private BufferedReader generarArchivoCorrecto() throws FileNotFoundException {
-		String rutaGeneral = System.getProperty("user.dir");
-		String rutaArchivoDatos = rutaGeneral + "\\data\\datos.txt";
+		String rutaArchivoDatos = RUTA_GENRAL + "\\data\\datos.txt";
 		File archivoDatos = new File(rutaArchivoDatos);
 		BufferedReader in = new BufferedReader(new FileReader(archivoDatos));
 	    return in;
 	}
 	
 	private BufferedReader generarArchivoVacio() throws FileNotFoundException {
-		String rutaGeneral = System.getProperty("user.dir");
-		String rutaArchivoDatos = rutaGeneral + "\\data\\datos_cortos.txt";
+		String rutaArchivoDatos = RUTA_GENRAL + "\\data\\datos_cortos.txt";
 		File archivoDatos = new File(rutaArchivoDatos);
 		BufferedReader in = new BufferedReader(new FileReader(archivoDatos));
 	    return in;
 	}
 	
 	private BufferedReader generarArchivoIncorrecto() throws FileNotFoundException {
-		String rutaGeneral = System.getProperty("user.dir");
-		String rutaArchivoDatos = rutaGeneral + "\\data\\datos_incorrectos.txt";
+		String rutaArchivoDatos = RUTA_GENRAL + "\\data\\datos_incorrectos.txt";
 		File archivoDatos = new File(rutaArchivoDatos);
 		BufferedReader in = new BufferedReader(new FileReader(archivoDatos));
 	    return in;
